@@ -10,7 +10,9 @@
         <StackPanel>
             <StackPanel  Width="800" Orientation="Horizontal">
             <TextBlock  Foreground="Orange" Padding="10" HorizontalAlignment="Center" FontSize="30" FontFamily="Comic Sans MS" >E-Commerce App</TextBlock>
-                <Button Margin="420,0,0,0" Content="Admin" Background="Orange" Padding="20" FontSize="25" ></Button>
+                
+                <Button Margin="100,0,0,0" Command="{Binding ToLowerCommand}" Content="Lower To Higher" Background="Orange" Padding="20" FontSize="25" ></Button>
+                <Button Margin="100,0,0,0" Command="{Binding OpenAdminCommand}" Content="Admin" Background="Orange" Padding="20" FontSize="25" ></Button>
             </StackPanel>
             <ListView    
                 ItemsSource="{Binding AllProducts}"

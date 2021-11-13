@@ -1,0 +1,34 @@
+﻿<Window x:Class="ECommerceApp.Domain.Views.ProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ECommerceApp.Domain.Views"
+        mc:Ignorable="d"
+        Title="ProductWindow" Height="550" Width="800">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Width="450">
+            <TextBlock Padding="8" FontSize="22">Name</TextBlock>
+            <TextBlock Padding="8" FontSize="22" Text="{Binding ProductInfo.Name}" ></TextBlock>
+            <TextBlock Padding="8" FontSize="22">Price</TextBlock>
+            <TextBlock Padding="8" FontSize="22" Text="{Binding ProductInfo.Price}" ></TextBlock>
+            <TextBlock Padding="8" FontSize="22">Discount</TextBlock>
+            <TextBlock Padding="8" FontSize="22" Text="{Binding ProductInfo.Discount}" ></TextBlock>
+            <TextBlock Padding="8" FontSize="22">Quantity</TextBlock>
+            <TextBlock Padding="8" FontSize="22" Text="{Binding ProductInfo.Quantity}" ></TextBlock>
+            <TextBlock Padding="8" FontSize="22">Description</TextBlock>
+            <TextBlock Padding="8" FontSize="22" Text="{Binding ProductInfo.Description}" ></TextBlock>
+            <Button Command="{Binding OrderCommand}" FontSize="25" FontFamily="Comic Sans MS" Background="Transparent" Foreground="Orange" >Order Now</Button>
+        </StackPanel>
+        <StackPanel >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Top" Height="40" FontSize="30"  >Amount</TextBlock>
+        <TextBox VerticalAlignment="Top" Height="40" Width="80" Text="{Binding Amount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Top" Height="40" FontSize="20"  >Customer Username</TextBlock>
+                <TextBox VerticalAlignment="Top" Height="40" Width="130" Text="{Binding Username,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>

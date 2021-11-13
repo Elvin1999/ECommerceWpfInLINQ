@@ -43,7 +43,11 @@ namespace ECommerceApp.DataAccess.SqlServer
         public void UpdateData(Product data)
         {
             var item = DataContext.Products.FirstOrDefault(p => p.Id == data.Id);
-            //item = data;
+            item.Name = data.Name;
+            item.Price = data.Price;
+            item.Description = data.Description;
+            item.Quantity = data.Quantity;
+            item.Discount = data.Discount;
             DataContext.SubmitChanges();
         }
     }
